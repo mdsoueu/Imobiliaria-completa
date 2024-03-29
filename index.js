@@ -35,6 +35,9 @@ meuServidor.use(rotasHistorico);
 const rotasFotos = require('./Fotos/controladorFotos');
 meuServidor.use(rotasFotos);
 
+// Visita
+const rotasVisita = require('./Visita/controladorVisita');
+meuServidor.use(rotasVisita);
 
 meuServidor.listen(4300, () => {
     console.log('Servidor na porta 4300.');

@@ -1,23 +1,22 @@
 const express = require('express');
 const router = express.Router();
-const Historico = require('./modeloHistorico');
+const Visita = require('./modeloVisita');
 
 /* Métodos */
 /* GET - Rota para consultar todos os registros */
-router.get('/historico', async (req, res) => {
-    const historico = await Historico.findAll();
-    res.send(historico);
+router.get('/visita', async (req, res) => {
+    const visita = await Visita.findAll();
+    res.send(visita);
 });
 
 /* POST - Rota para criar um novo registro */
-router.post('/historico/novo', (requisicao, resposta) => {
-    const percentualComissao = requisicao.body.percentualComissao;
-    const dataNegociacao = requisicao.body.dataNegociacao;
+router.post('/visita/novo', (requisicao, resposta) => {
+    const dataVisita = requisicao.body.dataVisita;
+    const visitaRealizada = requisicao.body.visitaRealizada;
     const fkImovel = requisicao.body.fkImovel;
     const fkCliente = requisicao.body.fkCliente;
-    const fkCorretor = requisicao.body.fkCorretor;
-
-    Historico.create({ percentualComissao: percentualComissao, dataNegociacao: dataNegociacao, fkImovel: fkImovel, fkCliente: fkCliente, fkCorretor: fkCorretor }).then(() => {
+    
+    Visita.create({ dataVisita: dataVisita, visitaRealizada: visitaRealizada, fkImovel: fkImovel, fkCliente: fkCliente }).then(() => {
         resposta.send('Cadastrado feito.');
     }).catch((erro) => {
         resposta.send('Ocorreu erro: ' + erro);
@@ -26,19 +25,19 @@ router.post('/historico/novo', (requisicao, resposta) => {
 });
 
 /* PUT - Rota para atualizar um registro */
-router.put('/historicoc:id', (requisicao, resposta) => {
+router.put('/visita/atualizar/:id', (requisicao, resposta) => {
     const id = requisicao.params.id;
-    const percentualComissao = requisicao.body.percentualComissao;
-    const dataNegociacao = requisicao.body.dataNegociacao;
+    const dataVisita = requisicao.body.dataVisita;
+    const visitaRealizada = requisicao.body.visitaRealizada;
     const fkImovel = requisicao.body.fkImovel;
     const fkCliente = requisicao.body.fkCliente;
-    const fkCorretor = requisicao.body.fkCorretor;
+    
 
-    Historico.findOne({ where: { codigo: id } }).then(historico => {
-        if (!historico) {
+    Visita.findOne({ where: { codigo: id } }).then(visita => {
+        if (!visita) {
             resposta.status(404).send('Item não encontrado.');
         } else {
-            historico.update({ percentualComissao: percentualComissao, dataNegociacao: dataNegociacao, fkImovel: fkImovel, fkCliente: fkCliente, fkCorretor: fkCorretor }).then(() => {
+            visita.update({ dataVisita: dataVisita, visitaRealizada: visitaRealizada, fkImovel: fkImovel, fkCliente: fkCliente }).then(() => {
                 resposta.send('Item atualizado.');
             }).catch(erro => {
                 resposta.status(500).send('Erro ao atualizar: ' + erro);
@@ -51,14 +50,14 @@ router.put('/historicoc:id', (requisicao, resposta) => {
 });
 
 /* DELETE - Rota para remover um registro */
-router.delete('/historico/excluir/:id', (requisicao, resposta) => {
+router.delete('/visita/excluir/:id', (requisicao, resposta) => {
     const id = requisicao.params.id;
 
-    Historico.findOne({ where: { codigo: id } }).then(historico => {
-        if (!historico) {
+    Visita.findOne({ where: { codigo: id } }).then(visita => {
+        if (!visita) {
             resposta.status(404).send('Item não encontrado.');
         } else {
-            historico.destroy().then(() => {
+            visita.destroy().then(() => {
                 resposta.send('Item deletado.');
             }).catch(erro => {
                 resposta.status(500).send('Erro ao deletar: ' + erro);
