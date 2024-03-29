@@ -4,7 +4,7 @@ const Proprietario = require('./modeloProprietario');
 
 /* Métodos */
 /* GET - Rota para consultar todos os registros */
-router.get('/corretor', async (req, res) => {
+router.get('/proprietario', async (req, res) => {
     const proprietario = await Proprietario.findAll();
     res.send(proprietario);
 });

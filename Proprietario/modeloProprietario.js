@@ -40,7 +40,7 @@ const Proprietario = conexao.define('proprietario', {
 });
 
 Proprietario.sync({
-    alter: true
+    force: true
 });
 
 module.exports = Proprietario;

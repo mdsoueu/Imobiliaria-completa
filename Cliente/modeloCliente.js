@@ -40,7 +40,7 @@ const Cliente = conexao.define('cliente', {
 });
 
 Cliente.sync({
-    alter: true
+    force: true
 });
 
 module.exports = Cliente;

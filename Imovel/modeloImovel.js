@@ -43,7 +43,7 @@ const Imovel = conexao.define('imovel', {
 });
 
 Imovel.sync({
-    alter: true
+    force: true
 });
 
 /* exporta o arquivo */
