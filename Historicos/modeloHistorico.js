@@ -5,7 +5,7 @@ const Imovel = require('../Imovel/modeloImovel');
 const Cliente = require('../Cliente/modeloCliente');
 const Corretor = require('../Corretor/modeloCorretor');
 
-const Proprietario = conexao.define('proprietario', {
+const Historico = conexao.define('historico', {
     codigo: {
         type: Sequelize.INTEGER,
         allowNull: false,
@@ -26,7 +26,8 @@ const Proprietario = conexao.define('proprietario', {
         reference: {
             model: Imovel,
             key :  'codigo'
-        }
+        },
+        onDelete: 'CASCADE'
     },
     fkCliente: {
         type: Sequelize.INTEGER,
@@ -34,7 +35,8 @@ const Proprietario = conexao.define('proprietario', {
         reference: {
             model: Cliente,
             key :  'codigo'
-        }
+        },
+        onDelete: 'CASCADE'
     },
     fkCorretor: {
         type: Sequelize.INTEGER,
@@ -42,14 +44,15 @@ const Proprietario = conexao.define('proprietario', {
         reference: {
             model: Corretor,
             key :  'codigo'
-        }
+        },
+        onDelete: 'CASCADE'
     }
 }, {
     timestamps: false
 });
 
-Proprietario.sync({
+Historico.sync({
     alter: true
 });
 
-module.exports = Proprietario;
+module.exports = Historico;

@@ -33,7 +33,8 @@ const Corretor = conexao.define('corretor', {
         reference: {
             model: Endereco,
             key :  'codigo'
-        }
+        },
+        onDelete: 'CASCADE'
     }
 }, {
     timestamps: false

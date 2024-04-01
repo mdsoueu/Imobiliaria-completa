@@ -25,7 +25,8 @@ const Visita = conexao.define('visita', {
         reference: {
             model: Imovel,
             key: 'codigo'
-        }
+        },
+        onDelete: 'CASCADE'
     },
     fkCliente: {
         type: Sequelize.INTEGER,
@@ -33,7 +34,8 @@ const Visita = conexao.define('visita', {
         reference: {
             model: Cliente,
             key: 'codigo'
-        }
+        },
+        onDelete: 'CASCADE'
     }
 }, {
     timestamps: false

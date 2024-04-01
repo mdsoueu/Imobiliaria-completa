@@ -1,0 +1,39 @@
+{
+    "nome": "Fernanda Oliveira",
+    "cpf": "45678912345",
+    "cnpj": "",
+    "dataNascimento": "1987/07/21",
+    "fkEndereco": 2
+}
+
+{
+    "nome": "Rafael Mendes",
+    "cpf": "98765432100",
+    "cnpj": "65432987000176",
+    "dataNascimento": "03/12/1995",
+    "fkEndereco": 1
+}
+
+{
+    "nome": "Aline Pereira",
+    "cpf": "98765432198",
+    "cnpj": "",
+    "dataNascimento": "11/04/1983",
+    "fkEndereco": 5
+}
+
+{
+    "nome": "Juliana Santos",
+    "cpf": "32165498712",
+    "cnpj": "54321987000109",
+    "dataNascimento": "1975/10/28",
+    "fkEndereco": 4
+}
+
+{
+    "nome": "Lucas Silva",
+    "cpf": "87654321022",
+    "cnpj": "12345678000198",
+    "dataNascimento": "10/09/1993",
+    "fkEndereco": 3
+}

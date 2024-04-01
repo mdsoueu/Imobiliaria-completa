@@ -1,0 +1,41 @@
+{
+    "nome": "João Silva",
+    "cpf": "12345678910",
+    "cnpj": "12345678000190",
+    "dataNascimento": "1980/05/10",
+    "fkEndereco": 1
+}
+
+{
+    "nome": "Maria Oliveira",
+    "cpf": "98765432100",
+    "cnpj": "9876543200121",
+    "dataNascimento": "1992/08/15",
+    "fkEndereco": 2
+}
+
+{
+    "nome": "José Santos",
+    "cpf": "23456789011",
+    "cnpj": "23456789000132",
+    "dataNascimento": "1985/03/25",
+    "fkEndereco": 3
+}
+
+{
+    "nome": "Ana Pereira",
+    "cpf": "87654321022",
+    "cnpj": "87654321000143",
+    "dataNascimento": "1976/11/02",
+    "fkEndereco": 4
+}
+
+{
+    "nome": "Carlos Souza",
+    "cpf": "34567890133",
+    "cnpj": "34567890000154",
+    "dataNascimento": "1990/09/12",
+    "fkEndereco": 5
+}
+
+

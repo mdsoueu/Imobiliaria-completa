@@ -1,0 +1,34 @@
+{
+    "descricao": "Casa espaçosa com jardim",
+    "areaMetros": 150.75,
+    "fkTipoImovel": 2,
+    "fkEndereco": 4
+}
+
+{
+    "descricao": "Apartamento moderno no centro da cidade",
+    "areaMetros": 80.25,
+    "fkTipoImovel": 3,
+    "fkEndereco": 2
+}
+
+{
+    "descricao": "Sala comercial em edifício corporativo",
+    "areaMetros": 200.0,
+    "fkTipoImovel": 1,
+    "fkEndereco": 1
+}
+
+{
+    "descricao": "Terreno para construção residencial",
+    "areaMetros": 500.5,
+    "fkTipoImovel": 5,
+    "fkEndereco": 3
+}
+
+{
+    "descricao": "Loja ampla em rua movimentada",
+    "areaMetros": 300.75,
+    "fkTipoImovel": 4,
+    "fkEndereco": 5
+}

@@ -33,7 +33,8 @@ const Cliente = conexao.define('cliente', {
         reference: {
             model: Endereco,
             key :  'codigo'
-        }
+        },
+        onDelete: 'CASCADE'
     }
 }, {
     timestamps: false

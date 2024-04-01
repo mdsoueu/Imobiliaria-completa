@@ -1,0 +1,34 @@
+{
+    "dataVisita": "2024-04-01",
+    "visitaRealizada": 1,
+    "fkImovel": 5,
+    "fkCliente": 1
+}
+
+{
+    "dataVisita": "2024-03-15",
+    "visitaRealizada": 0,
+    "fkImovel": 4,
+    "fkCliente": 3
+}
+
+{
+    "dataVisita": "2024-02-28",
+    "visitaRealizada": 1,
+    "fkImovel": 3,
+    "fkCliente": 2
+}
+
+{
+    "dataVisita": "2024-01-10",
+    "visitaRealizada": 0,
+    "fkImovel": 2,
+    "fkCliente": 4
+}
+
+{
+    "dataVisita": "2023-12-05",
+    "visitaRealizada": 1,
+    "fkImovel": 1,
+    "fkCliente": 5
+}
