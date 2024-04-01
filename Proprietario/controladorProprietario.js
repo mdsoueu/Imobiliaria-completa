@@ -58,11 +58,13 @@ router.delete('/proprietario/excluir/:id', (requisicao, resposta) => {
         if (!proprietario) {
             resposta.status(404).send('Item não encontrado.');
         } else {
+            
             proprietario.destroy().then(() => {
                 resposta.send('Item deletado.');
             }).catch(erro => {
                 resposta.status(500).send('Erro ao deletar: ' + erro);
             });
+
         }
     }).catch((erro) => {
         resposta.send('Ocorreu um erro ao deletar: ' + erro);

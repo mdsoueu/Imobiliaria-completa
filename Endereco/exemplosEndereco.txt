@@ -1,0 +1,44 @@
+{
+    "estado": "São Paulo",
+    "cidade": "São Paulo",
+    "bairro": "Pinheiros",
+    "rua": "Rua dos Pinheiros",
+    "complemento": "Apto 101",
+    "cep": "05422001"
+}
+
+{
+    "estado": "RJ",
+    "cidade": "Rio de Janeiro",
+    "bairro": "Copacabana",
+    "rua": "Avenida Atlântica",
+    "complemento": "Casa 2",
+    "cep": "22010000"
+}
+
+{
+    "estado": "MG",
+    "cidade": "Belo Horizonte",
+    "bairro": "Savassi",
+    "rua": "Rua Pernambuco",
+    "complemento": "Bloco B",
+    "cep": "30130150"
+}
+
+{
+    "estado": "BA",
+    "cidade": "Salvador",
+    "bairro": "Barra",
+    "rua": "Avenida Oceânica",
+    "complemento": "Fundos",
+    "cep": "40170010"
+}
+
+{
+    "estado": "PR",
+    "cidade": "Curitiba",
+    "bairro": "Batel",
+    "rua": "Alameda Dom Pedro II",
+    "complemento": "Sala 301",
+    "cep": "80420060"
+}

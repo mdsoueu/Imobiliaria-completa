@@ -3,7 +3,7 @@ const conexao = require('../Conexao/conexao');
 
 const Imovel = require('../Imovel/modeloImovel');
 
-const Fotos = conexao.define('proprietario', {
+const Fotos = conexao.define('fotos', {
     codigo: {
         type: Sequelize.INTEGER,
         allowNull: false,

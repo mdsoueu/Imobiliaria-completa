@@ -28,7 +28,8 @@ const Imovel = conexao.define('imovel', {
         references: {
             model: TipoImovel,
             key: 'codigo'
-        }
+        },
+        onDelete: 'CASCADE'
     },
     fkEndereco: {
         type: Sequelize.INTEGER,
@@ -36,7 +37,8 @@ const Imovel = conexao.define('imovel', {
         references: {
             model: Endereco,
             key: 'codigo'
-        }
+        },
+        onDelete: 'CASCADE'
     }
 }, {
     timestamps: false

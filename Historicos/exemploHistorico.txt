@@ -1,0 +1,39 @@
+{
+    "percentualComissao": 10.5,
+    "dataNegociacao": "2024-04-01",
+    "fkImovel": 1,
+    "fkCliente": 5,
+    "fkCorretor": 4
+}
+
+{
+    "percentualComissao": 8.75,
+    "dataNegociacao": "2024-03-15",
+    "fkImovel": 2,
+    "fkCliente": 4,
+    "fkCorretor": 1
+}
+
+{
+    "percentualComissao": 12.25,
+    "dataNegociacao": "2024-02-28",
+    "fkImovel": 3,
+    "fkCliente": 3,
+    "fkCorretor": 5
+}
+
+{
+    "percentualComissao": 9.0,
+    "dataNegociacao": "2024-01-10",
+    "fkImovel": 4,
+    "fkCliente": 2,
+    "fkCorretor": 2
+}
+
+{
+    "percentualComissao": 11.2,
+    "dataNegociacao": "2023-12-05",
+    "fkImovel": 5,
+    "fkCliente": 1,
+    "fkCorretor": 3
+}

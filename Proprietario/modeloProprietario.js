@@ -33,7 +33,8 @@ const Proprietario = conexao.define('proprietario', {
         reference: {
             model: Endereco,
             key :  'codigo'
-        }
+        },
+        onDelete: 'CASCADE'
     }
 }, {
     timestamps: false

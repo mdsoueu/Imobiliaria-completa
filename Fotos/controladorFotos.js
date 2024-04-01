@@ -17,7 +17,7 @@ router.post('/fotos/novo', (requisicao, resposta) => {
     const chaveAws = requisicao.body.chaveAws;
     const fkImovel = requisicao.body.fkImovel;
 
-    Endereco.create({ chaveAws: chaveAws, fkImovel: fkImovel }).then(() => {
+    Fotos.create({ chaveAws: chaveAws, fkImovel: fkImovel }).then(() => {
         resposta.send('Cadastrado feito.');
     }).catch((erro) => {
         resposta.send('Ocorreu erro: ' + erro);

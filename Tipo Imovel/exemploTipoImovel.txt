@@ -1,0 +1,19 @@
+{
+    "descricao": "Apartamento espaçoso com vista para o mar"
+}
+
+{
+    "descricao": "Casa de campo com piscina e jardim"
+}
+
+{
+    "descricao": "Escritório moderno em prédio corporativo"
+}
+
+{
+    "descricao": "Loja localizada em área residencial"
+}
+
+{
+    "descricao": "Terreno plano próximo ao centro da cidade"
+}
