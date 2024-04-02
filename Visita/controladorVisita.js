@@ -68,4 +68,19 @@ router.delete('/visita/excluir/:id', (requisicao, resposta) => {
     });
 });
 
+// (Opcional) Uma rota para consultar um registro por ID.
+router.get('/visita/:id', async (req, res) => {
+    const id = req.params.id;
+
+    Visita.findOne({ where: { codigo: id } }).then(visita => {
+            if (!visita) {
+                res.status(404).send('Item não encontrado.');
+            } else {
+                res.send(visita);
+            }
+        }).catch((erro) => {
+            res.status(500).send('Ocorreu um erro ao consultar o item: ' + erro);
+        });
+});
+
 module.exports = router;

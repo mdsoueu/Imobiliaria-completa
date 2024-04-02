@@ -71,4 +71,19 @@ router.delete('/imovel/excluir/:id', (requisicao, resposta) => {
 
 });
 
+// (Opcional) Uma rota para consultar um registro por ID.
+router.get('/imovel/:id', async (req, res) => {
+    const id = req.params.id;
+
+    Imovel.findOne({ where: { codigo: id } }).then(imovel => {
+            if (!imovel) {
+                res.status(404).send('Imóvel não encontrado.');
+            } else {
+                res.send(imovel);
+            }
+        }).catch((erro) => {
+            res.status(500).send('Ocorreu um erro ao consultar o imóvel: ' + erro);
+        });
+});
+
 module.exports = router;

@@ -66,4 +66,19 @@ router.delete('/fotos/excluir/:id', (requisicao, resposta) => {
     });
 });
 
+// (Opcional) Uma rota para consultar um registro por ID.
+router.get('/fotos/:id', async (req, res) => {
+    const id = req.params.id;
+
+    Fotos.findOne({ where: { codigo: id } }).then(fotos => {
+            if (!fotos) {
+                res.status(404).send('Foto não encontrado.');
+            } else {
+                res.send(fotos);
+            }
+        }).catch((erro) => {
+            res.status(500).send('Ocorreu um erro ao consultar: ' + erro);
+        });
+});
+
 module.exports = router;

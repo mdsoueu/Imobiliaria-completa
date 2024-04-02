@@ -63,4 +63,19 @@ router.delete('/tipoImovel/excluir/:id', (requisicao, resposta) => {
     });
 });
 
+// (Opcional) Uma rota para consultar um registro por ID.
+router.get('/tipoImovel/:id', async (req, res) => {
+    const id = req.params.id;
+
+    TipoImovel.findOne({ where: { codigo: id } }).then(tipoImovel => {
+            if (!tipoImovel) {
+                res.status(404).send('Tipo de imovel não encontrado.');
+            } else {
+                res.send(tipoImovel);
+            }
+        }).catch((erro) => {
+            res.status(500).send('Ocorreu um erro ao consultar o tipo de imovel: ' + erro);
+        });
+});
+
 module.exports = router;

@@ -1,5 +1,5 @@
 {
-    "estado": "São Paulo",
+    "estado": "SP",
     "cidade": "São Paulo",
     "bairro": "Pinheiros",
     "rua": "Rua dos Pinheiros",

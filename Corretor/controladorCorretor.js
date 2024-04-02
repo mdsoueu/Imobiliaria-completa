@@ -69,4 +69,19 @@ router.delete('/corretor/excluir/:id', (requisicao, resposta) => {
     });
 });
 
+// (Opcional) Uma rota para consultar um registro por ID.
+router.get('/corretor/:id', async (req, res) => {
+    const id = req.params.id;
+
+    Corretor.findOne({ where: { codigo: id } }).then(corretor => {
+            if (!corretor) {
+                res.status(404).send('Corretor não encontrado.');
+            } else {
+                res.send(corretor);
+            }
+        }).catch((erro) => {
+            res.status(500).send('Ocorreu um erro ao consultar o corretor: ' + erro);
+        });
+});
+
 module.exports = router;

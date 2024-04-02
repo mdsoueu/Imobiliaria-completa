@@ -69,4 +69,22 @@ router.delete('/cliente/excluir/:id', (requisicao, resposta) => {
     });
 });
 
+// (Opcional) Uma rota para consultar um registro por ID.
+router.get('/cliente/:id', async (req, res) => {
+    const id = req.params.id;
+
+    Cliente.findOne({ where: { codigo: id } })
+        .then(cliente => {
+            if (!cliente) {
+                res.status(404).send('Cliente não encontrado.');
+            } else {
+                res.send(cliente);
+            }
+        })
+        .catch((erro) => {
+            res.status(500).send('Ocorreu um erro ao consultar o cliente: ' + erro);
+        });
+});
+
+
 module.exports = router;

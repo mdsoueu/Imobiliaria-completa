@@ -69,4 +69,18 @@ router.delete('/historico/excluir/:id', (requisicao, resposta) => {
     });
 });
 
+// (Opcional) Uma rota para consultar um registro por ID.
+router.get('/historico/:id', async (req, res) => {
+    const id = req.params.id;
+
+    Historico.findOne({ where: { codigo: id } }).then(historico => {
+            if (!historico) {
+                res.status(404).send('Histórico não encontrado.');
+            } else {
+                res.send(historico);
+            }
+        }).catch((erro) => {
+            res.status(500).send('Ocorreu um erro ao consultar o histórico: ' + erro);
+        });
+});
 module.exports = router;

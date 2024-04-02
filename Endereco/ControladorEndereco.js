@@ -74,4 +74,19 @@ router.delete('/endereco/excluir/:id', (requisicao, resposta) => {
     });
 });
 
+// (Opcional) Uma rota para consultar um registro por ID.
+router.get('/endereco/:id', async (req, res) => {
+    const id = req.params.id;
+
+    Endereco.findOne({ where: { codigo: id } }).then(endereco => {
+            if (!endereco) {
+                res.status(404).send('Endereço não encontrado.');
+            } else {
+                res.send(endereco);
+            }
+        }).catch((erro) => {
+            res.status(500).send('Ocorreu um erro ao consultar o endereço: ' + erro);
+        });
+});
+
 module.exports = router;

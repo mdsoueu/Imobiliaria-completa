@@ -71,4 +71,18 @@ router.delete('/proprietario/excluir/:id', (requisicao, resposta) => {
     });
 });
 
+// (Opcional) Uma rota para consultar um registro por ID.
+router.get('/proprietario/:id', async (req, res) => {
+    const id = req.params.id;
+
+    Proprietario.findOne({ where: { codigo: id } }).then(proprietario => {
+            if (!proprietario) {
+                res.status(404).send('Proprietário não encontrado.');
+            } else {
+                res.send(proprietario);
+            }
+        }).catch((erro) => {
+            res.status(500).send('Ocorreu um erro ao consultar o proprietário: ' + erro);
+        });
+});
 module.exports = router;
