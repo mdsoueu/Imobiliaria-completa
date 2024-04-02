@@ -60,7 +60,7 @@ Visita - FK_Imovel, FK_Cliente
 
 Corretor - FK_Endereço
     GET - http://localhost:4300/corretor
-    GET(id) - http://localhost:4300/corretor/:id
+    GET (id) - http://localhost:4300/corretor/:id
     POST - http://localhost:4300/corretor/novo
     PUT - http://localhost:4300/corretor/atualizar/:id
     DELETE - http://localhost:4300/corretor/excluir/:id
