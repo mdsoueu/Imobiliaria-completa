@@ -24,7 +24,7 @@ const Proprietario = conexao.define('proprietario', {
         allowNull: true,
     },
     dataNascimento: {
-        type: Sequelize.DATE,
+        type: Sequelize.DATEONLY,
         allowNull: false
     },
     fkEndereco: {
