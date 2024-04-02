@@ -26,7 +26,7 @@ router.post('/historico/novo', (requisicao, resposta) => {
 });
 
 /* PUT - Rota para atualizar um registro */
-router.put('/historicoc:id', (requisicao, resposta) => {
+router.put('/historico/atualizar/:id', (requisicao, resposta) => {
     const id = requisicao.params.id;
     const percentualComissao = requisicao.body.percentualComissao;
     const dataNegociacao = requisicao.body.dataNegociacao;
